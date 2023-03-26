@@ -4,13 +4,13 @@
  * print_diagonal - Draws diagonal line with the use of \ character.
  * @n: The number of \ characters to be printed.
  */
-void print_diagonal(int m)
+void print_diagonal(int n)
 {
 	int line, space;
 
-	if (m > 0)
+	if (n > 0)
 	{
-		for (line = 0; line < m; line++)
+		for (line = 0; line < n; line++)
 		{
 			for (space = 0; space < line; space++)
 			{
@@ -18,7 +18,7 @@ void print_diagonal(int m)
 			}
 			_putchar('\\');
 
-			if (line == m - 1)
+			if (line == n - 1)
 			{
 				continue;
 			}
