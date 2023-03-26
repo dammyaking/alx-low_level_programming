@@ -4,14 +4,13 @@
  *
  * Return: 0-9 followed by newline
  */
-
 void print_numbers(void)
 {
 	int i;
 
-	i = 0;
+	i = 48;
 
-	while (i <= 9)
+	while (i <= 57)
 	{
 		_putchar (i);
 		i++;
