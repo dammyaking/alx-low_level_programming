@@ -2,11 +2,13 @@
 #define DOG_H
 
 /**
- * struct dog:struct datatype which stores information about dogs
+ * struct dog - Informs the user about the dog
  * @name: The dog's name
  * @age: The dog's age
  * @owner: The dog's owner
  *
+ * Description: A structure in C, named dog that stores some information
+ * about any dog, consisting of; the name, age and owner of each dogs.
  */
 struct dog
 {
