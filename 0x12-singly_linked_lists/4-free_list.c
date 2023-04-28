@@ -4,9 +4,8 @@
 /**
  * free_list - empty a list
  * @head:First element of the linked list.
- * 
+ *
  */
-
 void free_list(list_t *head)
 {
 	list_t *current_node;
