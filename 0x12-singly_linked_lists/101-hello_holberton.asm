@@ -11,6 +11,6 @@ main:	mov	rax, 1			;move the exit syscall
 		mov     rax, 60
 		xor	rdi, rdi
 		syscall
-		int 0X80
+	
 		section	.data		;contain data of information to be printed
-holberton:db	"Hello, Holberton", 0xA
+holberton:db	"Hello, Holberton", 60
