@@ -13,4 +13,4 @@ main:	mov	rax, 1			;move the exit syscall
 		syscall
 	
 		section	.data		;contain data of information to be printed
-holberton:db	"Hello, Holberton", 60
+message: db	"Hello, Holberton", 60
