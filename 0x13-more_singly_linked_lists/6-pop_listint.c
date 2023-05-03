@@ -6,7 +6,7 @@
  *        head of a listint_t list.
  *
  * Return: If listint Null - 0. If !Null return n
- *        
+ *
  */
 int pop_listint(listint_t **head)
 {
