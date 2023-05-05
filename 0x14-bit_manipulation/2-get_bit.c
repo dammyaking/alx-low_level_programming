@@ -1,54 +1,22 @@
 #include "main.h"
-#include <stdio.h>
-#include<stdlib.h>
-#include <unistd.h>
+
 
 /**
- * _pow - calculates (base ^ power)
- * @base: base of the number
- * @power: power of the number
+ * get_bit - return what a bit hold at a gien position.
+ * @n: number whose bit is checked
+ * @index: Position at which to check bit
  *
- * Return: value of (base ^ power)
+ * Return: value of  bit, or -1 if fail
  */
-
-unsigned long int _pow(unsigned int base, unsigned int power)
-
-{
-	unsigned long int num1;
-	unsigned int j;
-
-	num1 = 1;
-	for (j = 1; j <= power; j++)
-		num1 *= base;
-	return (num1);
-}
-
-/**
- * print_binary - prints a nos in base2
- * @n: nos to print
- *
- * Return: void
- */
-void print_binary(unsigned long int n)
-
+int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int divisor, check;
-	char flag;
 
-	flag = 0;
-	divisor = _pow(2, sizeof(unsigned long int) * 8 - 1);
-	while (divisor != 0)
-	{
-		check = n & divisor;
-		if (check == divisor)
-		{
-			flag = 1;
-			_putchar('1');
-		}
-		else if (flag == 1 || divisor == 1)
-		{
-			_putchar('0');
-		}
-		divisor >>= 1;
-	}
+	if (index > (sizeof(unsigned long int) * 8 - 1))
+		return (-1);
+	divisor = 1 << index;
+	check = n & divisor;
+	if (check == divisor)
+		return (1);
+	return (0);
 }
